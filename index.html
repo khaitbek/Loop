@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop 1</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <!-- main start -->
+    <main>
+        <section class="chat-section">
+            <div class="chat-container d-flex fd-column">
+
+                <div class="chat-info d-flex">
+                    <h3 class="chat-info-title">MARK ZUCKERBERG</h3>
+                    <button class="close-btn btn"></button>
+                </div>
+
+                <div class="chat-messages d-flex fd-column">
+                    <div class="line"></div>
+                    <strong class="chat-messages-title">Today</strong>
+                    <ul class="messages-list">
+                        <li class="messages-item user-message">
+                            <p class="message-info">
+                                <time class="message-time" datetime="2022-08-15">10:53</time>
+                            </p>
+                            <h4 class="message-text">Hi, mark! I'm at the new design for Messenger App.</h4>
+                        </li>
+                        <li class="messages-item">
+                            <p class="message-info">
+                                <time class="message-time" datetime="2022-08-15">10:53</time>
+                            </p>
+                            <h4 class="message-text">Yo! Send it to my assistant and we'll review it during the year.
+                            </h4>
+                        </li>
+                        <li class="messages-item user-message">
+                            <p class="message-info">
+                                <time class="message-time" datetime="2022-08-15">10:53</time>
+                            </p>
+                            <h4 class="message-text">But Mark...</h4>
+                        </li>
+                        <li class="messages-item blocked blocked-message">
+                            <p class="message-info">
+                                <time class="message-time" datetime="2022-08-15">10:53</time>
+                            </p>
+                            <h4 class="message-text">You are blocked by the user</h4>
+                        </li>
+                    </ul>
+                </div>
+                <div class="send-message-wrapper">
+                    <form class="message-form" action="https://echo.htmlacademy.ru/courses"><input class="form-input"
+                            aria-label="Enter your message" placeholder="Enter your message" name="user_message"
+                            required="required"  type="text"><button class="form-submit-btn btn"
+                            type="submit">SEND</button></form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- main end -->
+</body>
+
+</html>
