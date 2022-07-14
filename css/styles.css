@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 :root {
     --clr-white: #fff;
     --clr-black: #000;
@@ -59,14 +66,21 @@
 
 
 * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 body {
     height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     font-family: var(--font-family);
     font-weight: var(--font-weight);
     background-image: var(--background);
@@ -90,34 +104,55 @@ ul {
 }
 
 .d-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .fd-column {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .chat-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 550px;
     margin-right: auto;
     margin-left: auto;
 }
 
 .chat-info {
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 100%;
     padding: 35px 32px;
     background-color: #6a96d8;
 }
 
 .chat-info-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin: 0;
     font-weight: 700;
     font-size: 24px;
@@ -172,7 +207,8 @@ ul {
 /* chat messages */
 .chat-container {
     width: 100%;
-    padding-block-end: 21px;
+    -webkit-padding-after: 21px;
+            padding-block-end: 21px;
     background-color: var(--clr-white);
 }
 
@@ -205,8 +241,13 @@ ul {
 
 .messages-list {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-bottom: 32px;
     padding-bottom: 32px;
     border-bottom: 2px solid #f2f2f2;
@@ -219,6 +260,8 @@ ul {
     padding: 10px 16px;
     background-color: #f2f2f2;
     border-radius: 4px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
 }
 
@@ -242,7 +285,8 @@ ul {
 }
 
 .messages-item:not(.user-message) {
-    align-self: flex-end;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
 }
 
 .blocked-message {
@@ -303,13 +347,45 @@ ul {
 }
 
 .message-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .form-input {
     outline-offset: 10px;
     border: none;
+}
+
+.form-input::-webkit-input-placeholder {
+    font-weight:var(--font-weight);
+    font-size: 18px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.form-input::-moz-placeholder {
+    font-weight:var(--font-weight);
+    font-size: 18px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.form-input:-ms-input-placeholder {
+    font-weight:var(--font-weight);
+    font-size: 18px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.form-input::-ms-input-placeholder {
+    font-weight:var(--font-weight);
+    font-size: 18px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.6);
 }
 
 .form-input::placeholder {
